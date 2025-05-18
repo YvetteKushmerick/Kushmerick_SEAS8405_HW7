@@ -14,6 +14,27 @@ DOCKER_COMPOSE_PATH = 'docker-compose.yml'
 
 # Retrieve password from environment variable instead of hardcoding
 PASSWORD = os.environ.get('PASSWORD')
+#changed the .env file password function to a complex password. Below is an example. 
+
+#MIN_PASSWORD_LEN = 16 #changed to be more secure
+#SPEC_CHARS = {';', ')', '&', '!'}
+#NUM_SPECIALS = 2
+
+#def first_password():
+#    username = input("Enter a username: ")
+ #   password1, password2 = 1,2
+#    while(password1 != password2):
+#        password1 = getpass.getpass("Enter a password: ")
+#        password2 = getpass.getpass("Reenter your password: ")
+#        num_of_specials = sum(1 for char in password1 if char in SPEC_CHARS)
+#        if (password1 != password2):
+#            input("Your passwords do not match. Press Enter to try again")
+#        elif (len(password1) < MIN_PASSWORD_LEN):
+  #          password1, password2 = 1,2
+ #           input(f"Your password must be {MIN_PASSWORD_LEN} characters long. Press Enter to try again")
+#        elif (num_of_specials < NUM_SPECIALS):
+ #           password1, password2 = 1,2
+ #          input(f"Your password must have {NUM_SPECIALS} special characters. Press Enter to try again")
 
 def update_daemon_json():
     """Update or create daemon.json with security settings."""
